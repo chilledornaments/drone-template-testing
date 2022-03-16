@@ -1,0 +1,4 @@
+kind: template
+load: .drone.template.yml
+data:
+  pipeline_name: hello world
