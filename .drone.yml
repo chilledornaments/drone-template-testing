@@ -1,4 +1,4 @@
 kind: template
-load: .drone.template.yml
+load: example_template.yaml
 data:
   pipeline_name: hello world
