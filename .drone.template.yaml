@@ -11,4 +11,4 @@ steps:
      commands:
         - whoami
 
-{{ input.additional_steps }}
+  {{ input.additional_steps }}
