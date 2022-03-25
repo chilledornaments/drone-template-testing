@@ -2,4 +2,6 @@ kind: template
 load: example_template.yaml
 data:
   pipeline_name: hello world
-  # hello_world_commands: ls
+  hello_world_commands:
+    - ls
+    - whoami
