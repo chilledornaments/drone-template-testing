@@ -2,3 +2,8 @@ kind: template
 load: example_template.yaml
 data:
   pipeline_name: hello world
+  additional_steps:
+    - name: Hello world
+      image: alpine
+      commands:
+        - echo "Hello"

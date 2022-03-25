@@ -10,3 +10,5 @@ steps:
      image: alpine
      commands:
         - whoami
+
+{{ input.additional_steps }}
