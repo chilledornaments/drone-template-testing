@@ -1,6 +1,6 @@
 kind: pipeline
 type: docker
-name: {{  input.pipeline_name } }
+name: {{ .input.pipeline_name }}
 
 trigger:
   event:
@@ -11,4 +11,9 @@ steps:
      commands:
         - whoami
 
-  {{ input.additional_steps }}
+   - name: hello world
+     image: alpine
+     commands:
+     {{ range .input.hello_world_commands }}
+     - {{ . }}
+     {{ end }}
