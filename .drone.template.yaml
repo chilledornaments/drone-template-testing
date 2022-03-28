@@ -2,9 +2,19 @@ kind: pipeline
 type: docker
 name: {{ .input.pipeline_name }}
 
+
+{{ with .input.trigger }}
 trigger:
+  {{ range .events }}
   event:
-    - push
+    - {{ . }}
+  {{ end }}
+  {{ range .branches }}
+  branch:
+    - {{ . }}
+  {{ end }}
+{{ end }}
+
 steps:
    - name: build
      image: alpine
