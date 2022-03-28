@@ -15,7 +15,7 @@ data:
     run: true
 
   top_level:
-    - name: dev
-      greeting: "hello world"
+  - name: dev
+    greeting: "hello world"
 
 

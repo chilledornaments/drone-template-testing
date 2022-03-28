@@ -27,3 +27,20 @@ steps:
      {{ range .input.hello_world_commands }}
      - {{ . }}
      {{ end }}
+
+  {{ if .input.test_if.run }}
+   - name: test if
+     image: alpine
+     commands:
+       - echo "Running"
+       {{ range .input.top_level }}
+       - echo {{ .name }}
+       {{ end }}
+  {{ end }}
+
+  {{ range .input.top_level }}
+   - name: "{{ .name }} top_level"
+     image: alpine
+     commands:
+       - echo "Hello {{ .greeting }}"
+  {{ end }}
