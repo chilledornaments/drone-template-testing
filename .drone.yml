@@ -52,3 +52,4 @@ data:
   - name: foo
     greeting: FOOBAR
     image: alpine:latest
+---
