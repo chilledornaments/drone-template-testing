@@ -36,3 +36,18 @@ steps:
     image: alpine
     commands:
       - env
+
+---
+kind: pipeline
+type: docker
+name: on push
+
+trigger:
+  event:
+    - push
+
+steps:
+  - name: Hello
+    image: alpine
+    commands:
+      - echo "hello"
