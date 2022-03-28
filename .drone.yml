@@ -17,5 +17,6 @@ data:
   top_level:
   - name: dev
     greeting: "hello world"
+    image: python:3
 
 
