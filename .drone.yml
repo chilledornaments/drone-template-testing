@@ -13,3 +13,8 @@ data:
     - whoami
   test_if:
     run: false
+
+  top_level:
+    - name: dev
+      greeting: "hello world"
+
