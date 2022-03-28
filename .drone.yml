@@ -12,7 +12,7 @@ data:
     - ls
     - whoami
   test_if:
-    run: false
+    run: true
 
   top_level:
     - name: dev
