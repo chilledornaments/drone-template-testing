@@ -11,3 +11,5 @@ data:
   hello_world_commands:
     - ls
     - whoami
+  test_if:
+    run: true
