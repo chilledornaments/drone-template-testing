@@ -28,7 +28,7 @@ steps:
     commands:
       - echo "hello"
 
----
+# ---
 #kind: template
 #load: example_template.yaml
 #data:
