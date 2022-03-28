@@ -11,4 +11,4 @@ steps:
   - name: show env
     image: alpine
     commands:
-      - env
+      - echo "$${TESTING_PARAM}"
