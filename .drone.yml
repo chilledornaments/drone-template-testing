@@ -8,3 +8,4 @@ data:
   hello_world_commands:
     - ls
     - whoami
+
