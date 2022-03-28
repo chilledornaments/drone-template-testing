@@ -1,4 +1,28 @@
 ---
+kind: template
+load: example_template.yaml
+data:
+  trigger:
+    events:
+      - push
+    branches:
+      - testing
+      - main
+  pipeline_name: hello world
+  hello_world_commands:
+    - ls
+    - whoami
+  test_if:
+    run: true
+
+  top_level:
+  - name: dev
+    greeting: "hello world"
+    image: python:3
+  - name: foo
+    greeting: FOOBAR
+    image: alpine:latest
+---
 kind: pipeline
 type: docker
 name: params
@@ -11,4 +35,4 @@ steps:
   - name: show env
     image: alpine
     commands:
-      - echo "$${TESTING_PARAM}"
+      - env
