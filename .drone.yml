@@ -1,3 +1,4 @@
+---
 kind: template
 load: example_template.yaml
 data:
@@ -18,5 +19,20 @@ data:
   - name: dev
     greeting: "hello world"
     image: python:3
+  - name: foo
+    greeting: FOOBAR
+    image: alpine:latest
+---
+kind: pipeline
+type: docker
+name: params
 
+trigger:
+  event:
+    - custom
 
+steps:
+  - name: show env
+    image: alpine
+    commands:
+      - env
