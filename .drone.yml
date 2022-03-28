@@ -12,4 +12,4 @@ data:
     - ls
     - whoami
   test_if:
-    run: true
+    run: false
