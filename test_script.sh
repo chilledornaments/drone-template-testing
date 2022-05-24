@@ -1,0 +1,3 @@
+HELLO=foo
+
+echo ${HELLO}
