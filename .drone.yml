@@ -11,6 +11,9 @@ steps:
     image: alpine:latest
     commands:
       - sh ./test_script.sh
+      - echo 'v${FOO}'
+    environment:
+      FOO: bar
 #---
 #kind: template
 #load: example_template.yaml
